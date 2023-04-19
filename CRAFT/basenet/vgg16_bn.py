@@ -1,11 +1,11 @@
 from collections import namedtuple
 import pkg_resources
 #pkg_resources.require("torch==1.7.1") # The version you want to import 
-pkg_resources.require("torch==1.7.1+cpu")
+#pkg_resources.require("torch==1.7.1+cu110")
 import torch
 import torch.nn as nn
 import torch.nn.init as init
-pkg_resources.require("torchvision==0.8.2") # The version you want to import 
+#pkg_resources.require("torchvision==0.8.2") # The version you want to import 
 import torchvision
 from torchvision import models
 from torchvision.models.vgg import model_urls

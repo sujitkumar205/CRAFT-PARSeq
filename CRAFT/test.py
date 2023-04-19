@@ -10,7 +10,7 @@ import time
 import argparse
 import pkg_resources
 #pkg_resources.require("torch==1.7.1")
-pkg_resources.require("torch==1.7.1+cpu")
+#pkg_resources.require("torch==1.7.1+cu110")
 import torch
 import torch.nn as nn
 import torch.backends.cudnn as cudnn

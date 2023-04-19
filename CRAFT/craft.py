@@ -5,7 +5,7 @@ MIT License
 
 # -*- coding: utf-8 -*-
 import pkg_resources
-pkg_resources.require("torch==1.7.1+cpu")
+#pkg_resources.require("torch==1.7.1+cu110")
 #pkg_resources.require("torch==1.7.1") # The version you want to import 
 import torch
 import torch.nn as nn
