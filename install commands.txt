@@ -1,0 +1,12 @@
+pip install -r requirements.txt
+
+pip uninstall torch
+
+pip uninstall torchvision
+
+pip3 install torchvision==0.8.2+cu110 -f https://download.pytorch.org/whl/torch_stable.html --ignore-installed --no-cache-dir
+
+pip3 install torch==1.10.2 -f https://download.pytorch.org/whl/torch_stable.html --ignore-installed --no-cache-dir 
+
+pip install setuptools==59.5.0
+
