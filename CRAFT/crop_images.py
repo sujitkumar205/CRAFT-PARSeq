@@ -55,13 +55,13 @@ def generate_words(image_name, score_bbox, image):
         try:
           file_name = os.path.join(dir + image_name)
           cv2.imwrite(file_name+'_{}_{}_{}_{}_{}_{}_{}_{}.jpg'.format(l_t, t_l, r_t ,t_r, r_b , b_r ,l_b, b_l), word)
-          print('Image saved to '+file_name+'_{}_{}_{}_{}_{}_{}_{}_{}.jpg'.format(l_t, t_l, r_t ,t_r, r_b , b_r ,l_b, b_l))
+          #print('Image saved to '+file_name+'_{}_{}_{}_{}_{}_{}_{}_{}.jpg'.format(l_t, t_l, r_t ,t_r, r_b , b_r ,l_b, b_l))
         except:
           continue
 
 data=pd.read_csv('data.csv')
 
-start = 'TestImages/'
+start = 'CRAFT/TestImages/'
 
 for image_num in range(data.shape[0]):
   image = cv2.imread(os.path.join(start, data['image_name'][image_num]))

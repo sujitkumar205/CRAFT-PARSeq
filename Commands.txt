@@ -1,5 +1,1 @@
-python pipeline.py --trained_model=craft_mlt_25k.pth --test_folder=TestImages
-
-python crop_images.py
-
-python predict.py
+python SceneTextRecognition.py

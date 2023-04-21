@@ -39,8 +39,8 @@ parser.add_argument('--trained_model', default='weights/craft_mlt_25k.pth', type
 parser.add_argument('--text_threshold', default=0.7, type=float, help='text confidence threshold')
 parser.add_argument('--low_text', default=0.4, type=float, help='text low-bound score')
 parser.add_argument('--link_threshold', default=0.4, type=float, help='link confidence threshold')
-parser.add_argument('--cuda', default=False, type=str2bool, help='Use cuda for inference')
-parser.add_argument('--canvas_size', default=1280, type=int, help='image size for inference')
+parser.add_argument('--cuda', default=True, type=str2bool, help='Use cuda for inference')
+parser.add_argument('--canvas_size', default=960, type=int, help='image size for inference')
 parser.add_argument('--mag_ratio', default=1.5, type=float, help='image magnification ratio')
 parser.add_argument('--poly', default=False, action='store_true', help='enable polygon type')
 parser.add_argument('--show_time', default=False, action='store_true', help='show processing time')
@@ -64,9 +64,9 @@ for num in range(len(image_list)):
   image_names.append(os.path.relpath(image_list[num], start))
 
 
-result_folder = './Results'
-if not os.path.isdir(result_folder):
-    os.mkdir(result_folder)
+#result_folder = './Results'
+#if not os.path.isdir(result_folder):
+#    os.mkdir(result_folder)
 
 if __name__ == '__main__':
 
@@ -124,10 +124,10 @@ if __name__ == '__main__':
         data['word_bboxes'][k]=bbox_score
         # save score text
         filename, file_ext = os.path.splitext(os.path.basename(image_path))
-        mask_file = result_folder + "/res_" + filename + '_mask.jpg'
-        cv2.imwrite(mask_file, score_text)
+        #mask_file = result_folder + "/res_" + filename + '_mask.jpg'
+        #cv2.imwrite(mask_file, score_text)
 
-        file_utils.saveResult(image_path, image[:,:,::-1], polys, dirname=result_folder)
+        #file_utils.saveResult(image_path, image[:,:,::-1], polys, dirname=result_folder)
 
     data.to_csv('data.csv', sep = ',', na_rep='Unknown')
-    print("elapsed time : {}s".format(time.time() - t))
+    #print("elapsed time : {}s".format(time.time() - t))
